@@ -1,5 +1,5 @@
 // ***************************************************
-// * CS460: Programming Assignment 4: Test Program 1 *
+// * CS460: Programming Assignment 5: Test Program 1 *
 // ***************************************************
 
 function int sum_of_first_n_squares (int n)

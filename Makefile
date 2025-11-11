@@ -7,7 +7,7 @@ CXXFLAGS := -std=c++11 -O2 -Wall -Wextra
 PARSER_TARGET := main
 
 # Source files for organized version
-SRCS := main.cpp CommentRemover.cpp Tokenizer.cpp CSTParser.cpp SymbolTableBuilder.cpp
+SRCS := main.cpp CommentRemover.cpp Tokenizer.cpp CSTParser.cpp SymbolTableBuilder.cpp ASTBuilder.cpp
 OBJS := $(SRCS:.cpp=.o)
 
 all: $(PARSER_TARGET)
