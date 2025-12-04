@@ -4,4 +4,4 @@ TO RUN PROGRAM:
 
 1. make
 
-2. ./main <testfilename>
+2. ./main "testfilename"
