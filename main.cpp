@@ -2,7 +2,8 @@
 #include "Tokenizer.h"
 #include "CSTParser.h"
 #include "SymbolTableBuilder.h"
-#include "ASTBuilder.h" // <-- Added for AST generation
+#include "ASTBuilder.h"
+#include "Interpreter.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -61,13 +62,14 @@ int main(int argc, char *argv[])
     // CSTParser::printCST(tokens, outFile);
     outFile.close();
 
-    // Assignment 5: Build and Print AST
-    cout << "\n====================================" << endl;
-    cout << "BUILDING ABSTRACT SYNTAX TREE (AST)" << endl;
-    cout << "====================================" << endl;
-
+    // Assignment 5: Build AST
     ASTNode *ast = ASTBuilder::build(cst);
-    ASTBuilder::printExpected(ast, cout);
+    
+    // Assignment 6: Interpret and Execute
+    Interpreter interpreter(ast, table, parameterLists);
+    interpreter.execute();
+    
+    // Cleanup
     ASTBuilder::free(ast);
 
     return 0;

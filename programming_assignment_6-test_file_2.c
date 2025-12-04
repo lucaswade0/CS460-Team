@@ -1,5 +1,5 @@
 // ***************************************************
-// * CS460: Programming Assignment 5: Test Program 2 *
+// * CS460: Programming Assignment 6: Test Program 2 *
 // ***************************************************
 
 
